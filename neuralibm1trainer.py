@@ -121,9 +121,8 @@ class NeuralIBM1Trainer:
         if batch_id % 100 == 0:
           print("Iter {:5d} loss {:6f} accuracy {:1.2f} lr {:1.6f}".format(
             batch_id, res["loss"], batch_accuracy, lr_t))
-          break
         
-        if batch_id % 5000 == 0:
+        if batch_id % 5000 == 0:  #break after 5000, to keep computation time down.
           break
 
       # evaluate on development set
